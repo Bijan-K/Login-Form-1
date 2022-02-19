@@ -1,0 +1,225 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/back.jpg);
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 330px;
+  background-color: rgba(255, 255, 255, 0.281);
+  border-radius: 5px;
+  text-align: center;
+  padding: 50px 35px 16px 35px;
+}
+
+.container header {
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.container-outer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide-page {
+  transition: 0.3s ease;
+}
+
+.container .container-outer form {
+  width: 500%;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: -400%;
+}
+
+.container .container-outer form .page .title {
+  font-size: 24px;
+  margin-bottom: 24px;
+  font-weight: 500;
+  text-align: right;
+}
+
+.container .container-outer form .page .field {
+  height: 45px;
+  margin-bottom: 36px;
+  width: 260px;
+}
+
+.container .container-outer form .page .field .label {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: right;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.container .container-outer form .page .field input {
+  height: 36px;
+  width: 100%;
+  border: 1px solid lightgray;
+  direction: rtl;
+  text-align: justify;
+  padding-right: 5px;
+  font-size: 18px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  border-radius: 5px;
+  padding-left: 15px;
+  outline: 0;
+}
+
+.container .container-outer form .page .field select {
+  height: 36px;
+  width: 100%;
+  border: 1px solid lightgray;
+  font-size: 18px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  border-radius: 5px;
+  padding-left: 15px;
+  outline: 0;
+}
+
+.container .container-outer form .page .field button {
+  padding: 12px;
+  margin: 8px 0;
+  width: 120px;
+  border: none;
+  background-color: #70e1f575;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.container .container-outer form .page .field button:hover {
+  background: #a5fcfcd7;
+}
+
+.container .progress-bar {
+  display: flex;
+  margin: 40px 0;
+}
+
+.container .progress-bar .step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.container .progress-bar .step p {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.container .progress-bar .step p.active {
+  color: #70e1f5;
+}
+
+.container .progress-bar .step .bullet {
+  position: relative;
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  font-size: 16px;
+  transition: 0.2s ease;
+}
+
+.container .progress-bar .step .bullet.active {
+  border-color: #70e1f5;
+}
+
+.container .progress-bar .step .bullet.active span {
+  display: none;
+}
+
+.container .progress-bar .step .bullet::before,
+.container .progress-bar .step .bullet::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 32px;
+  background-color: rgb(0, 0, 0);
+  bottom: 50%;
+  right: -38px;
+}
+
+.container .progress-bar .step:last-child .bullet::before,
+.container .progress-bar .step:last-child .bullet::after {
+  display: none;
+}
+
+.container .progress-bar .step .check {
+  position: absolute;
+  top: 54%;
+  display: none;
+  transition: 0.2s ease;
+  direction: rtl;
+  text-align: justify;
+}
+
+.container .progress-bar .step .check.active {
+  display: block;
+  color: #70e1f5;
+}
+
+.container .progress-bar .step .check i {
+  color: #70e1f5;
+  font-size: 22px;
+}
+
+.container .progress-bar .step .bullet .span.active {
+  display: none;
+}
+
+.container .progress-bar .step .bullet.active::after {
+  background: #70e1f5;
+  transform: scaleX(0);
+  transform-origin: right;
+  animation: fill 0.3s linear forwards;
+}
+
+@keyframes fill {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.page-4 {
+  width: 260px;
+}
+
+.final-check {
+  color: aliceblue;
+}
+
+.final-check h2 {
+  text-align: center;
+  width: 160px;
+}
